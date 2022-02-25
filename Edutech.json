@@ -1,0 +1,81 @@
+
+/* MONGODB ASSIGNMENT */
+
+
+// Creating and using database 
+use EduTech 
+
+
+//insert many 
+db.admin.insertMany([
+        {
+            name : "Akash",
+            email : "akash.gmail.com",
+            courses : [{
+                cname : "OS ",
+                sessions : 20,
+                assignment : 2
+            },
+            {    cname : "DBMS ",
+                sessions : 21,
+                assignment : 3
+            }]
+        },
+        {
+            name : "Astitva",
+            email : "astitva@gmail.com",
+            courses : [{
+                cname : "Cloud",
+                sessions : 20,
+                assignment : 2
+            },
+            {    cname : "ML",
+                sessions : 21,
+                assignment : 3
+            },
+            {
+                cname: "COA",
+                sessions : 10 ,
+                assignnment : 1
+            }
+            ]
+        }    
+        ]
+        )
+
+
+// Update many application
+db.Admin.updateMany(
+    {   name : "Akash"
+            
+    },
+    {
+        $set : {email : "Akash@gmail.com"}
+    }
+    )
+
+
+// student table 
+    db.student.insertMany(
+    [{
+        sname : "Aman",
+        sage : 12,
+        scourse : "OS" 
+    },
+    {
+        sname : "Ashutosh",
+        sage : 18,
+        scourse : "DBMS" 
+    },
+    {
+        sname : "Aditya",
+        sage : 21,
+        scourse : "DS" 
+    },
+    {
+        sname : "Abhi",
+        sage : 14,
+        scourse : "ML" 
+    }
+        
+    ])
